@@ -1,0 +1,5 @@
+webfontloader jsinterop
+sample can be started via mvn gwt:run
+install via mvn install
+webfontloader is documented at https://github.com/typekit/webfontloader/
+
