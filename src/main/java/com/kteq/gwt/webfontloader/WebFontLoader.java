@@ -51,6 +51,8 @@ public class WebFontLoader {
         WebFontOptions o = new WebFontOptions();
 
 
+        o.setTimeout(10000);
+
         o.setLoadingCallback( e -> Console.log("webfont loading started"));
         o.setActiveCallback( e -> callback.onSuccess(fontFaces.stream().collect(Collectors.joining(","))));
 
