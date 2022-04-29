@@ -8,6 +8,9 @@ import jsinterop.annotations.JsType;
 public abstract class Console {
 
 	private Console() {};
-	public static native void log(Object ms);
+	public static native void log(Object o);
+	public static native void log(Object o1, Object o2);
+	public static native void log(Object o1, Object o2, Object o3);
+	public static native void log(Object o1, Object o2, Object o3, Object o4);
 
 }

@@ -37,8 +37,8 @@ public class WebFontLoader {
     public static final void load(WebFontOptions o) {
         //carica la libresia
         ensureInjected();
-        Console.log(o);
-        //libreira caricata, oravanno caricati i font.
+        //Console.log(o);
+        //libreira caricata, ora vanno caricati i font.
         NativeWebFont.load(o);
     }
 
@@ -61,7 +61,7 @@ public class WebFontLoader {
 
         o.setFontLoadingCallback( e -> Console.log("Webfontloader processing '"+ e + "' started"));
         o.setFontActiveCallback( e -> Console.log("Success loading '"+ e + "'"));
-        o.setFontInactiveCallback( e -> Console.log("Error loading '"+ e + "'"));
+        o.setFontInactiveCallback( e->  callback.onFailure( new Exception("error loading font: " + e)) );
 
         CustomEntry ce = new CustomEntry();
         ce.families = fontFaces.toArray(new String[fontFaces.size()]);

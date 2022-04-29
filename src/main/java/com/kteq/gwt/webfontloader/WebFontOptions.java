@@ -20,6 +20,8 @@ public class WebFontOptions {
     @JsProperty
     public native void setGoogle(GoogleEntry ce);
 
+    @JsProperty
+    public native void setClasses(boolean classes);
 
 /*
     loading: function() {},
@@ -47,6 +49,9 @@ public class WebFontOptions {
 
     @JsProperty(name = "fontinactive")
     public native void setFontInactiveCallback(WebFontConsumer<Object> c);
+
+    @JsProperty(name = "timeout")
+    public native void setTimeout(int millis);
 
 
 }
